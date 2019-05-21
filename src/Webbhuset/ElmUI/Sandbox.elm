@@ -9,6 +9,20 @@ module Webbhuset.ElmUI.Sandbox exposing
     , spawnChild
     )
 
+{-|
+
+Sandbox support for Elm UI
+
+@docs SandboxProgram
+    , TestCase
+    , ui
+    , layout
+    , service
+    , sendMsg
+    , delay
+    , spawnChild
+
+-}
 
 import Html exposing (Html)
 import Element exposing (Element)
@@ -44,8 +58,21 @@ ui :
     , wrapView : Element msgIn -> Html msgIn
     }
     -> SandboxProgram model msgIn msgOut
-ui =
+ui ({ component } as args) =
     Sandbox.ui
+        { title = args.title
+        , component =
+            { init = component.init
+            , update = component.update
+            , onSystem = component.onSystem
+            , subs = component.subs
+            , view = component.view >> args.wrapView
+            }
+        , cases = args.cases
+        , stringifyMsgIn = args.stringifyMsgIn
+        , stringifyMsgOut = args.stringifyMsgOut
+        , wrapView = identity
+        }
 
 
 {-| Layout Component
