@@ -1,7 +1,7 @@
 {
     "type": "package",
     "name": "webbhuset/elm-actor-model-elm-ui",
-    "summary": "Support module for Elm UI",
+    "summary": "Use Elm UI in webbhuset/elm-actor-model ",
     "license": "MIT",
     "version": "1.0.0",
     "exposed-modules": {
