@@ -3,7 +3,7 @@
     "name": "webbhuset/elm-actor-model-elm-ui",
     "summary": "Use Elm UI in webbhuset/elm-actor-model ",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "exposed-modules": {
         "Elm UI": [
             "Webbhuset.ElmUI.Component",
