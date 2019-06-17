@@ -16,7 +16,7 @@
         "elm/core": "1.0.2 <= v < 2.0.0",
         "elm/html": "1.0.0 <= v < 2.0.0",
         "mdgriffith/elm-ui": "1.1.0 <= v < 2.0.0",
-        "webbhuset/elm-actor-model": "3.0.0 <= v < 4.0.0"
+        "webbhuset/elm-actor-model": "4.0.0 <= v < 5.0.0"
     },
     "test-dependencies": {}
 }
